@@ -15,8 +15,6 @@ function App() {
     location: 'Cairo, Egypt',
     gender: 'Female',
     bio: 'أحب تطوير واجهات المستخدم وتجربة المستخدم، وأسعى لتقديم تصاميم تفاعلية ومريحة.',
-     
- 
   };
 
   return (
