@@ -1,0 +1,50 @@
+/* خلفية الصفحة بصورة */
+.user-card-container {
+  background-image: url('https://images.unsplash.com/photo-1753819761290-f5124b5f2b34?q=80&w=1203&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;     /* يغطي ارتفاع الشاشة فقط */
+  width: 100vw;      /* يغطي عرض الشاشة بالكامل */
+  position: relative;
+  overflow: hidden;
+ 
+}
+
+/* طبقة شفافة فوق الخلفية */
+.user-card-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* غامقة وشفافة */
+  backdrop-filter: blur(6px);
+  z-index: 0;
+}
+
+
+/* الكارد نفسه */
+.user-card {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* تأثير عند تمرير الماوس */
+.user-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* الصور داخل الكارد */
+.user-card img {
+  transition: transform 0.3s ease;
+}
+
+.user-card img:hover {
+  transform: scale(1.05);
+}

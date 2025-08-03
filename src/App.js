@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
+import UserCard from './components/userCard/userCard.js';
+import './components/userCard/userCard.css';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 function App() {
+
+  const user = {
+    avatar: 'https://i.pravatar.cc/150?img=12',
+    username: 'Nada Mohey',
+    title: 'Frontend Developer',
+    location: 'Cairo, Egypt',
+    gender: 'Female',
+    bio: 'أحب تطوير واجهات المستخدم وتجربة المستخدم، وأسعى لتقديم تصاميم تفاعلية ومريحة.',
+     
+ 
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container d-flex justify-content-center">
+      <UserCard user={user} />
     </div>
   );
-}
+
+  
+
+};
 
 export default App;
