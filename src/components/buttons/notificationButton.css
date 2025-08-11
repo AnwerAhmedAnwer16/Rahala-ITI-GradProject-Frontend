@@ -1,0 +1,138 @@
+/* palette */
+:root{
+  --deep-green: #4C6A4C;
+  --gold: #C8A951;
+  --cream: #F9F5E7;
+}
+
+/* wrapper */
+.notif-wrapper {
+  position: relative;
+  display: inline-block;
+  z-index: 50;
+}
+
+/* الزرار الصغير الدائري */
+.notif-btn {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: var(--cream);
+  color: var(--deep-green);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* badge العدد */
+.notif-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--gold);
+  color: #fff;
+  font-size: 0.62rem;
+  padding: 2px 6px;
+  border-radius: 999px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+/* البانيل (القائمة) */
+.notif-panel {
+  position: absolute;
+  top: 44px;
+  right: 0;
+  width: 320px;
+  max-height: 420px;
+  transform-origin: top right;
+  transform: translateY(-6px) scale(0.98);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .16s ease, opacity .16s ease;
+  background: var(--cream);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  border: 1px solid rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+/* عندما تُفتح */
+.notif-panel.open {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ترويسة البانيل */
+.notif-panel-header {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  background: linear-gradient(180deg, rgba(76,106,76,0.06), transparent);
+}
+
+/* قائمة الاشعارات */
+.notif-list {
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+/* عنصر الاشعار */
+.notif-item {
+  display: flex;
+  gap: 10px;
+  padding: 12px 14px;
+  cursor: pointer;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+/* جديد (غير مقروء) */
+.notif-item.unopened {
+  background: #fff9e8; /* فاتح دافئ يوضح انه جديد */
+  font-weight: 600;
+}
+
+/* مقروء */
+.notif-item.opened {
+  background: white;
+  color: #444;
+  font-weight: 400;
+}
+
+/* تفاصيل داخل العنصر */
+.notif-title {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+.notif-desc {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.1;
+}
+.notif-time {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: #777;
+}
+
+/* حالة فارغة */
+.notif-empty {
+  padding: 18px;
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* ريسبونسيف للموبايل */
+@media (max-width: 520px) {
+  .notif-panel {
+    width: 92vw;
+    left: 4%;
+    right: 4%;
+    top: 48px;
+  }
+}

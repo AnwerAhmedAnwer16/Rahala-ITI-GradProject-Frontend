@@ -1,0 +1,195 @@
+/* ====== Navbar Container ====== */
+.navbar-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #f9f5e7; /* خلفية فاتحة */
+  border-bottom: 1px solid #ddd;
+}
+
+/* ====== Logo ====== */
+.logo-img {
+  height: 40px; /* أو أي حجم مناسب */
+}
+
+
+/* ====== Desktop Links ====== */
+.desktop-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #556b2f;
+}
+
+/* ====== Desktop Actions (Search, Notifications, Profile) ====== */
+.desktop-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Search Box */
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  padding: 6px 30px 6px 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.search-input:focus {
+  border-color: #556b2f;
+}
+
+.search-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+/* ====== Notifications ====== */
+.notification-container {
+  position: relative;
+}
+
+/* ====== Profile Menu ====== */
+.profile-container {
+  position: relative;
+}
+
+.profile-icon {
+  font-size: 1.8rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.profile-icon:hover {
+  color: #556b2f;
+}
+
+.profile-menu {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 150px;
+  overflow: hidden;
+}
+
+.menu-item {
+  display: block;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  background: #f2f2f2;
+}
+
+.logout {
+  color: #d33;
+}
+
+/* ====== Mobile Menu Button ====== */
+.mobile-menu-button {
+  display: none;
+}
+
+.mobile-menu-button button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+/* ====== Mobile Sidebar ====== */
+.mobile-sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 999;
+}
+
+.mobile-sidebar {
+  background: white;
+  width: 250px;
+  height: 100%;
+  padding: 20px;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.mobile-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+.mobile-links a:hover {
+  color: #556b2f;
+}
+
+.mobile-profile-links {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.mobile-profile-links a,
+.mobile-profile-links button {
+  display: block;
+  padding: 8px 0;
+  font-size: 0.9rem;
+  color: #333;
+  text-decoration: none;
+  background: none;
+  border: none;
+  text-align: left;
+}
+
+.mobile-profile-links .logout {
+  color: #d33;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .desktop-links,
+  .desktop-actions {
+    display: none;
+  }
+  .mobile-menu-button {
+    display: block;
+  }
+}
