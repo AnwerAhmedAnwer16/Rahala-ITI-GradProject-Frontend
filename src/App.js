@@ -44,9 +44,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/explore" element={<Explore />} />
       </Routes>
-    <div className="container d-flex justify-content-center">
-      <UserCard user={user} />
-    </div>    
+
+   
+
+      
     </>
   );
 
