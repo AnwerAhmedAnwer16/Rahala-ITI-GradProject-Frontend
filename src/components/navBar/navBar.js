@@ -21,8 +21,12 @@ const Navbar = () => {
 
       {/* Desktop Navigation */}
       <div className="desktop-links">
-        <NavLink to="/" className="nav-link">Home</NavLink>
-        <NavLink to="/explore" className="nav-link">Explore</NavLink>
+        <NavLink to="/" className="nav-link">
+        <i className="bi bi-house-door-fill"></i>
+         Home</NavLink>
+        <NavLink to="/explore" className="nav-link">
+        <i className="bi bi-compass-fill"></i>
+         Explore</NavLink>
       </div>
 
       {/* Desktop Right Side */}
