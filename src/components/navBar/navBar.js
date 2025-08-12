@@ -41,6 +41,16 @@ const Navbar = () => {
           <FaSearch className="search-icon" />
         </div>
 
+        {/* Add Trip */}
+        <NavLink
+          to="/add-trip"
+          className="nav-link add-trip-button"
+        >
+          <i className="bi bi-plus-circle-fill"></i>
+          Add Trip
+        </NavLink>
+
+
         {/* Notifications */}
         <div className="notification-container">
           <NotificationButton count={3} onClick={() => console.log(" see notifications")} />
