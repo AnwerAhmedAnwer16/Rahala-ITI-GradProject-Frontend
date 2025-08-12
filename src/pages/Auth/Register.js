@@ -79,6 +79,7 @@ const Register = () => {
   };
 
   return (
+    <AuthLayout>
     <div className="auth-container">
       {/* النص على اليسار */}
       <div className="text-section">
@@ -224,6 +225,7 @@ const Register = () => {
         </div>
       </div>
     </div>
+    </AuthLayout>
   );
 };
 
