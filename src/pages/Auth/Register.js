@@ -3,6 +3,7 @@ import AuthLayout from "../../layouts/authLayout";
 import Button from "../../components/buttons/buttons";
 import { FaUser, FaEnvelope, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 import "./auth.css";
+import { Link } from "react-router-dom";
  
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -208,7 +209,7 @@ const Register = () => {
             </div>
             {errors.confirmPassword && <p className="error-text">{errors.confirmPassword}</p>}
 
-            <button type="submit" className="btn-green">Register</button>
+          <Button text="Register" type="submit" variant="primary" fullWidth />
           </form>
 
           <div className="divider">OR</div>
@@ -222,6 +223,16 @@ const Register = () => {
             <img src="https://www.svgrepo.com/show/448224/facebook.svg" alt="Facebook" width="20" />
             Continue with Facebook
           </button>
+
+          {/* Have an account? Login */}
+          <div className="login-link mt-4 text-center">
+            <p>
+              Have an account?{" "}
+              <Link to="/login" className="text-green-400 hover:underline font-medium">
+  Login
+</Link>
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -165,7 +165,7 @@
 }
 
 .btn-green {
-  background-color: #2E7D32;
+  background-color: #4C6A4C;
   color: white;
   padding: 0.75rem;
   border: none;
@@ -315,4 +315,21 @@
 
 .input-icon.right:hover svg {
   color: #e2e8f0;
+}
+.login-link {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #e2e8f0;
+}
+
+.login-link a {
+  color: #4ade80;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.login-link a:hover {
+  color: #22c55e;
+  text-decoration: underline;
 }

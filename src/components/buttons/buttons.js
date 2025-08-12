@@ -30,6 +30,11 @@ const Button = ({
     ...variants[variant],
     width: fullWidth ? "100%" : "auto",
     border: "none",
+    borderRadius: "6px",
+    fontWeight: "bold",
+    cursor: "PointerEvent",
+    width: "100%",
+    transition: "background 0.3s ease",
   };
 
   return (
