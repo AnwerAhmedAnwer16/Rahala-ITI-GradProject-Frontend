@@ -6,9 +6,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { useState } from 'react';
 import Navbar from './components/navBar/navBar.js';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Explore from './pages/Explore.js';
 import Home from './pages/Home.js';
+import { BrowserRouter } from "react-router-dom";
+import Login from "./pages/Auth/Login.js";
+import Register from "./pages/Auth/Register.js";
 
 
 
@@ -38,17 +41,14 @@ function App() {
   };
 
   return (
-    <>
-    <Navbar />
-    <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/explore" element={<Explore />} />
+    <BrowserRouter>
+      <Routes>
+        {/* أول ما يفتح يروح على Register */}
+        <Route path="/" element={<Navigate to="/register" replace />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
-
-   
-
-      
-    </>
+    </BrowserRouter>
   );
 
   
